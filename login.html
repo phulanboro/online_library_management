@@ -20,7 +20,7 @@ function login(){
     let p = document.getElementById("password").value;
 
     if(u === "admin" && p === "admin"){
-        window.location.href = "dashboard.html";
+        window.location.href = "./dashboard.html";
     } else {
         document.getElementById("error").innerText = "Invalid Login!";
     }
