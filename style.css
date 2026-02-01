@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 /* Login Page Background */
 .login-bg {
     background: url("bg-login.jpg") no-repeat center center/cover;
@@ -79,3 +80,4 @@ th, td {
 tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
