@@ -72,7 +72,7 @@ function displayBooks(){
             <td>${b.author}</td>
             <td>${b.isbn}</td>
             <td>${b.year}</td>
-            <td>${b.status}</td>
+            <td style="color:${b.status === 'Borrowed' ? 'red':'green'}">${b.status}</td>
             <td>${b.borrowerName}</td>
             <td>${b.borrowerId}</td>
             <td>
@@ -94,6 +94,10 @@ function clearForm(){
 
 function saveBooks(){
     localStorage.setItem("books", JSON.stringify(books));
+}
+
+function logout(){
+    window.location.href = "./index.html";
 }
 
 // Load books on page start
