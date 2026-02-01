@@ -1,7 +1,7 @@
-let books = [];
+let books = JSON.parse(localStorage.getItem("books")) || [];
 
 function addBook(){
-    let name = bookName.value;
+    let name = document.getElementById("bookName").value;
     let author = document.getElementById("author").value;
     let isbn = document.getElementById("isbn").value;
     let year = document.getElementById("year").value;
@@ -21,7 +21,8 @@ function addBook(){
         borrowerId: "-"
     });
 
-    bookName.value = author.value = isbn.value = year.value = "";
+    saveBooks();
+    clearForm();
     displayBooks();
 }
 
@@ -42,6 +43,7 @@ function borrowBook(i){
     books[i].status = "Borrowed";
     books[i].borrowerName = borrowerName;
     books[i].borrowerId = borrowerId;
+    saveBooks();
     displayBooks();
 }
 
@@ -49,11 +51,13 @@ function returnBook(i){
     books[i].status = "Available";
     books[i].borrowerName = "-";
     books[i].borrowerId = "-";
+    saveBooks();
     displayBooks();
 }
 
 function deleteBook(i){
     books.splice(i,1);
+    saveBooks();
     displayBooks();
 }
 
@@ -80,3 +84,17 @@ function displayBooks(){
         `;
     });
 }
+
+function clearForm(){
+    document.getElementById("bookName").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("isbn").value = "";
+    document.getElementById("year").value = "";
+}
+
+function saveBooks(){
+    localStorage.setItem("books", JSON.stringify(books));
+}
+
+// Load books on page start
+window.onload = displayBooks;
