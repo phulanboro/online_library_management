@@ -1,17 +1,9 @@
-/* Reset & Base */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box;
 }
 
-* {
-    box-sizing: inherit;
-}
-
-/* =======================
-   Login Page Background
-   ======================= */
+/* Login Page Background */
 .login-bg {
     background: url("bg-login.jpg") no-repeat center center/cover;
     height: 100vh;
@@ -20,99 +12,57 @@ body {
     align-items: center;
 }
 
-/* =======================
-   Dashboard Background
-   ======================= */
+/* Dashboard Background */
 .dashboard-bg {
     background: url("bg-dashboard.jpg") no-repeat center center/cover;
     min-height: 100vh;
     padding: 20px;
 }
 
-/* =======================
-   Login Box
-   ======================= */
+/* Login Box */
 .login-box {
     width: 300px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 25px 20px;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.login-box h2 {
-    margin-bottom: 15px;
 }
 
 .login-box input {
     width: 90%;
     padding: 8px;
     margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
-/* =======================
-   Error Message
-   ======================= */
-#error {
-    color: red;
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-/* =======================
-   Buttons
-   ======================= */
-button {
-    padding: 8px 14px;
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    background: #007bff;
-    color: #fff;
-    font-size: 14px;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-/* =======================
-   Dashboard Container
-   ======================= */
+/* Dashboard */
 .container {
-    background: rgba(255, 255, 255, 0.95);
-    width: 90%;
+    background: rgba(255,255,255,0.9);
+    width: 80%;
     max-width: 1200px;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
 }
 
-/* =======================
-   Add Book Form
-   ======================= */
+/* Add Book Form */
 .add-book {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
 }
-
 .add-book input {
     flex: 1;
     min-width: 150px;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
-/* =======================
-   Table Styling
-   ======================= */
+/* Buttons */
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Table */
 table {
     font-size: 14px;
     width: 100%;
@@ -126,35 +76,6 @@ th, td {
     text-align: center;
 }
 
-th {
-    background: #f1f1f1;
-}
-
 tbody tr:nth-child(even) {
     background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-    background-color: #e6f0ff;
-}
-
-tbody tr td:nth-child(5) {
-    font-weight: bold;
-}
-
-/* =======================
-   Responsive
-   ======================= */
-@media (max-width: 600px) {
-    .login-box {
-        width: 90%;
-    }
-
-    .add-book {
-        flex-direction: column;
-    }
-
-    .container {
-        width: 95%;
-    }
 }
