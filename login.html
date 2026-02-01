@@ -15,11 +15,11 @@
 </div>
 
 <script>
-function login(){
+function login() {
     let u = document.getElementById("username").value;
     let p = document.getElementById("password").value;
 
-    if(u === "admin" && p === "admin"){
+    if (u === "admin" && p === "admin") {
         window.location.href = "./dashboard.html";
     } else {
         document.getElementById("error").innerText = "Invalid Login!";
