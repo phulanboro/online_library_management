@@ -20,7 +20,7 @@ function login(){
     let u = document.getElementById("username").value;
     let p = document.getElementById("password").value;
 
-    if(u === "admin" && p === "admin"){
+    if(u === "admin" && p === "12345"){
         window.location.href = "./dashboard.html";
     } else {
         document.getElementById("error").innerText = "Invalid Login!";
@@ -30,6 +30,7 @@ function login(){
 
 </body>
 </html>
+
 
 
 
