@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-bg">
+
+<div class="container">
+    <h1>📚 Library Management System</h1>
+
+    <!-- Add Book -->
+    <div class="add-book">
+        <input type="text" id="bookName" placeholder="Book Name">
+        <input type="text" id="author" placeholder="Author Name">
+        <input type="text" id="isbn" placeholder="ISBN Number">
+        <input type="number" id="year" placeholder="Year">
+        <button onclick="addBook()">Add Book</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Year</th>
+                <th>Status</th>
+                <th>Borrower Name</th>
+                <th>Borrower ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="bookList"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
