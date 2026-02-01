@@ -10,6 +10,7 @@ function addBook(){
         alert("Please fill all fields");
         return;
     }
+    
 
     books.push({
         name,
@@ -102,3 +103,4 @@ function logout(){
 
 // Load books on page start
 window.onload = displayBooks;
+
