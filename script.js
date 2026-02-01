@@ -101,7 +101,7 @@ function logout(){
     window.location.href = "./index.html";
 }
 
-// Load books on page start
 window.onload = displayBooks;
+
 
 
